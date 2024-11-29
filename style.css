@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --comman-padding:0 10vw;
+    --background-color:rgb(4, 4, 44);
+    --second-background-color:#2b34b4;
+    --text-color:white;
+    --main-color:hwb(197 0% 0%);
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color:var(--background-color) ;
+}
+header{
+    background-color: rgb(3, 3, 77);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--comman-padding); 
+   position: -1rem fixed;
+    
+  
+    
+}
+.header-left{
+    font-size: 2.7rem;
+    color: var(--text-color);
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 1rem 0;
+
+}
+.header-right a{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 300;
+    text-decoration: none;
+    margin-left:4rem ;
+
+}
+.header-right a:hover,
+.header-right a.active{
+   color:var(--text-color);
+}
+#menu-icon{
+    font-size: 3.5rem;
+    display: none;
+    color: var(--text-color);
+    
+}
+
+.section{ 
+    min-height: 100vh;
+    padding: var(--comman-padding);
+}
+.section-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding-bottom: 6rem;
+    margin-top: 14vh;
+}
+
+.section-main h1:nth-of-type(2n+1){
+    font-size: 3rem;
+    color: var(--text-color);
+    padding-bottom: 1rem;
+    
+}
+.section-main h1:nth-child(2n){
+    font-size: 4rem;
+    color: var(--text-color);
+    padding-bottom: 1rem;
+}
+.section-main p{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 400;
+   width: 67rem;
+}
+.section-main span{
+    color: var(--main-color);
+}
+.section-img img{
+    border-radius: 60%;
+    animation: AddAnimation 5s ease-in-out infinite;
+}
+@keyframes AddAnimation{
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.link-icon a{
+    width: 3rem;
+    height: 3rem;
+    color: var(--main-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   border: .3rem solid var(--main-color);
+   border-radius: 50%;
+   font-size: 2rem;
+   margin: 3rem 1.5rem 3rem 0 ;
+   transform: .5s ease;
+  
+}
+.link-icon a:hover{
+    background: var(--main-color);
+    color: var(--second-background-color);
+}
+.section-btn{
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    color: black;
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    transform: .5s ease;
+    border-radius: none;
+}
+.section-btn:hover{
+    background: var(--second-background-color);
+    color: var(--text-color);
+   
+}
+
