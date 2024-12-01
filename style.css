@@ -3,17 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    outline: none;
 }
 :root{
     --comman-padding:0 10vw;
     --background-color:rgb(4, 4, 44);
-    --second-background-color:#2b34b4;
+    --second-background-color:rgb(6, 6, 66) ;
     --text-color:white;
     --main-color:hwb(197 0% 0%);
 
 }
 html{
-    font-size: 62.5%;
+    font-size: 62.5%;overflow-x: hidden;
+   
 }
 body{
     background-color:var(--background-color) ;
@@ -25,10 +28,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: var(--comman-padding); 
-   position: -1rem fixed;
-    
-  
-    
+   position:  fixed;
+   top: 0;
+   left: 0;   
 }
 .header-left{
     font-size: 2.7rem;
@@ -57,17 +59,14 @@ header{
     
 }
 
-.section{ 
-    min-height: 100vh;
-    padding: var(--comman-padding);
-}
+
 .section-main{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    padding-bottom: 6rem;
-    margin-top: 14vh;
+    padding: var(--comman-padding);
 }
 
 .section-main h1:nth-of-type(2n+1){
@@ -130,11 +129,590 @@ header{
     font-size: 1.5rem;
     display: inline-block;
     transform: .5s ease;
-    border-radius: none;
+    
 }
-.section-btn:hover{
+.section-btn:hover {
     background: var(--second-background-color);
     color: var(--text-color);
    
 }
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: var(--comman-padding);
+    height: 100vh;
+    
+}
+.about-img img{
+    height:30rem ;
+    width: 20rem;
+    border: .5rem solid var(--main-color);
+    border-radius: 2rem;
+}
+.about-me h1{
+    font-size: 3rem;
+    color: var(--text-color);
+    padding-bottom: .5rem;
+}
+.about-me span{
+    color: var(--main-color);
+}
+.about-me h2{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+}
+.about-me p{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 400;
+    width: 67rem;
+    padding-bottom: 2rem;
+   
+}
+.about-me button{
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    color: black;
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    transform: .5s ease;
+}
+.about-me button:hover{
+    background: var(--second-background-color);
+    color: var(--text-color);
+}
+.project{
+    padding: var(--comman-padding);
+    background-color:var(--background-color);
+    
+}
+
+.tech h3{
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+    padding-top: 7rem ;
+    padding-bottom: 2rem;
+
+}
+.tech span{
+    color: var(--main-color);
+}
+.tech-icon{
+text-align: center;
+padding:2rem 2rem;
+
+}
+
+.Latest-project{
+    background-color: var(--second-background-color);
+    height: 40rem;
+    border-radius: 3rem;
+    border: .2rem solid var(--main-color);
+    padding-top: 4rem;
+    
+}
+.Latest-project h1{
+    font-size: 3rem;
+    font-weight:700;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.Latest-project span{
+    color: var(--main-color);
+}
+.Latest-project h4{
+    margin-bottom: 4rem;
+}
+.project-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr) ;
+    align-items: center;
+    gap: 4.5rem;
+}
+.project-container .project-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--background-color);
+    overflow: hidden;
+    display: flex;
+}
+.project-box img{
+    width: 100%;
+    padding:0 3rem;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+.project-box:hover img{
+    transform: scale(1.1);
+}
+.project-box .project-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgb(140, 210, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.project-box:hover .project-info{
+    transform: translateY(0);
+}
+.project-info h4{
+    font-size: 2rem;
+    margin: .3rem 0 1rem;
+    color: var(--text-color);
+}
+.project-info a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+.project-info a i{
+    font-size: 2rem;
+    color: var(--second-background-color);
+}
+.heading{
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+    margin: 10rem 4rem  0 0;
+}
+.heading span{
+    color: var(--main-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 10rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-background-color);
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form .submit-btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    background-color: var(--main-color);
+    height: 4rem;
+    width: 10rem;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--comman-padding);
+    background-color: var(--second-background-color);
+    height: 5rem;
+}
+.footer-text{
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.footer-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-icon a i{
+    font-size: 2.4rem;
+    color: var(--second-background-color);
+}
+@media (max-width:768px) {
+   
+    #menu-icon{
+        display: block;
+    }
+    .header-right{
+        position: absolute;
+        left: 0;
+        width: .1%;
+        height: 7rem;
+        padding: 2rem 3%;
+        margin-top: 5rem;
+        background: var(--background-color);
+        border-top: .1rem solid rgba(0, 0, 0 .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0 .2);
+    }
+    .header-right.active{
+        display: block;
+    }
+    .header-right a {
+        font-size: 2rem ;
+        display: block;
+        margin: 3rem 0;
+    }
+    .section-main{
+        flex-direction: column-reverse;
+        padding-left: 11rem;
+        padding-bottom: 8rem;
+        
+    }
+    .section-main p{
+        font-size: 2rem;
+        width: 55rem;
+    }
+    .section-img img{
+        width: 50vh;
+        margin-top: 4rem;
+
+    }
+    .section-main h1{
+        font-size: .2rem;
+    }
+
+   
+    .Latest-project{
+        height: 100rem;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .project-box img{
+        height: 25rem;
+    }
+    .about{
+        flex-direction: column;
+        margin-top: -11rem;
+        padding-left: 6rem;
+    }
+    .about-img img{
+        height: 1rem;
+        width: 35rem;
+    }
+    .about-me h1{
+        font-size: 4rem;
+    }
+    .about-me h2{
+        font-size:3rem ;
+    }
+    .about-me p{
+        font-size:1rem;
+        width: 55rem;
+    }
+    .tech h3{
+        font-size: 5rem;
+    }
+    .tech-icon svg{
+        height: 7rem;
+        width: 5rem;
+        margin-left: -1rem;
+    }
+    .Latest-project h1{
+        font-size: 4rem;
+    }
+   
+    .contact h2{
+        font-size: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+        height: 10rem;
+    }
+    .contact form textarea{
+        height: 30rem;
+    }
+    .contact form .submit-btn{
+       
+        height: 6rem;
+        width: 12rem;
+        
+        font-size: 1.9rem;
+        font-weight: 400;
+
+    
+    
+}
+}
+@media(max-width:1500px){
+    html{
+        font-size: 90%;
+    }
+}
+@media(max-width:1200px){
+    html{
+        font-size: 85%;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .section-main{
+        flex-direction: column-reverse;
+    }
+    .section-img img{
+        width: 40vh;
+        margin-top: 5rem;
+
+    }
+   
+    .Latest-project{
+        height: 70rem;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .project-box img{
+        height: 15rem;
+    }
+    .about{
+        flex-direction: column;
+        margin-top: -3rem;
+    }
+    .about-img img{
+        height: 40rem;
+        width: 32rem;
+    }
+    .about-me h1{
+        font-size: 4rem;
+    }
+    .about-me h2{
+        font-size:3rem ;
+    }
+    .about-me p{
+        font-size:1rem;
+    }
+    .tech h3{
+        font-size: 4rem;
+    }
+    .tech-icon svg{
+        height: 7rem;
+        width: 5rem;
+        margin-left: -1rem;
+    }
+    .Latest-project h1{
+        font-size: 3rem;
+    }
+    .contact h2{
+        font-size: 3rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+        height: 5rem;
+    }
+    .contact form textarea{
+        height: 21rem;
+    }
+    .contact form .submit-btn{
+       
+        height: 6rem;
+        width: 12rem;
+        
+        font-size: 1.9rem;
+        font-weight: 400;
+
+    
+    
+}
+
+}
+@media(max-width:991px){
+    html{
+        font-size: 75%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .section-main{
+        flex-direction: column-reverse;
+    }
+    .section-img img{
+        width: 45vh;
+        margin-top: 5rem;
+
+    }
+   
+    .Latest-project{
+        height: 85rem;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .project-box img{
+        height: 20rem;
+    }
+    .about{
+        flex-direction: column;
+        margin-top: -3rem;
+    }
+    .about-img img{
+        height: 37rem;
+        width: 35rem;
+        margin-top: 4rem;
+    }
+    .about-me h1{
+        font-size: 5rem;
+    }
+    .about-me h2{
+        font-size:3rem ;
+    }
+    .about-me p{
+        font-size:2rem;
+    }
+    .tech h3{
+        font-size: 5rem;
+    }
+    .tech-icon svg{
+        height: 7rem;
+        width: 5rem;
+        margin-left: -1rem;
+    }
+    .Latest-project h1{
+        font-size: 4rem;
+    }
+    .contact h2{
+        font-size: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+        height: 7rem;
+    }
+    .contact form textarea{
+        height: 26rem;
+    }
+    .contact form .submit-btn{
+       
+        height: 6rem;
+        width: 12rem;
+        
+        font-size: 1.9rem;
+        font-weight: 400;
+
+    
+    
+}
+}
+@media (max-width:617px) {
+    html{
+        font-size: 55%;
+    }
+    .menu-icon{
+        display: block;
+    }
+    .header-right{
+        display: none;
+    }
+    .section-main{
+        flex-direction: column-reverse;
+        margin-bottom: 10rem;
+    }
+    .section-img img{
+        width: 35vh;
+        margin-top: -25rem;
+
+    }
+   
+    .Latest-project{
+        height: 100rem;
+    }
+    .project-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .project-box img{
+        height: 25rem;
+    }
+    .project{
+        margin-top: 16rem;
+    }
+    .about{
+        flex-direction: column;
+        margin-top: -70rem;
+    }
+    .about-img img{
+        height: 46rem;
+        width: 35rem;
+        margin-top: 30rem;
+    }
+    .about-me h1{
+        font-size: 6rem;
+    }
+    .about-me h2{
+        font-size:3rem ;
+    }
+    .about-me p{
+        font-size:2.5rem;
+    }
+    .tech h3{
+        font-size: 5rem;
+    }
+    .tech-icon svg{
+        height: 7rem;
+        width: 5rem;
+        margin-left: -1rem;
+    }
+    .Latest-project h1{
+        font-size: 4rem;
+    }
+    .contact h2{
+        font-size: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+        height: 10rem;
+        font-size: 2rem;
+    }
+    .contact form textarea{
+        height: 30rem;
+    }
+    .contact form .submit-btn{
+       
+        height: 6rem;
+        width: 12rem;
+        
+        font-size: 1.9rem;
+        font-weight: 400;
+
+    
+    
+}
+}
+
 
